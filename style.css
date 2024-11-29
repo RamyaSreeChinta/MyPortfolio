@@ -1,0 +1,111 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #a89f9f76; 
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Welcome Text */
+.welcome {
+    font-family: "Oswald", serif;
+  font-optical-sizing: auto; /* Ensures optimal font rendering */
+    font-size: 2.5rem; /* Adjust font size */
+    color: black; /* Use black text */
+    text-align: left; /* Align to the left */
+    margin: 20px; 
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    border: 1px solid black;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Intro Section */
+.intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+}
+
+/* Image Container */
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container img {
+    width: 250px;
+    height: 300px;
+    object-fit: cover;
+    border: 5px solid #f4f4f4; /* Border color around the image */
+    border-radius: 10px;
+}
+
+/* Content Section */
+.content {
+    flex: 2;
+    margin-left: 20px;
+}
+
+.content h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.content p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Bottom-Right Image Styling */
+.bottom-right-image {
+    position: fixed; 
+    bottom: 0; 
+    right: 0; 
+    z-index: 10; 
+    padding: 0px; 
+}
+
+.bottom-right-image img {
+    height: 3.7cm; /* Height of the image */
+    width: auto; 
+    object-fit: contain; /* Prevents distortion of the image */
+}
+
+
