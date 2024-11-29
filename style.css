@@ -15,9 +15,11 @@ body {
 /* Container */
 .container {
     width: 90%;
+    max-width: 1200px; /* Increase max-width for larger screens */
     margin: 0 auto;
     padding: 40px;
 }
+
 
 /* Welcome Text */
 .welcome {
@@ -31,14 +33,17 @@ body {
 }
 
 /* Navigation Bar */
+/* Navigation Bar */
 .navbar {
     display: flex;
     justify-content: flex-end;
     gap: 10px;
     position: relative;
-    top: -70px; 
+    top: -70px;
+    padding: 10px;
 }
 
+/* Navigation Links (default for large screens) */
 .navbar a {
     text-decoration: none;
     color: black;
@@ -46,7 +51,6 @@ body {
     padding: 5px 15px;
     border-radius: 5px;
     font-size: 1rem;
-    border: 1px solid black;
     transition: background-color 0.3s ease;
 }
 
@@ -55,11 +59,59 @@ body {
     color: white;
 }
 
+/* Hamburger Icon (only shown on small screens) */
+.navbar-toggle {
+    display: none;  /* Hidden on large screens */
+    cursor: pointer;
+}
+
+.navbar-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 5px 0;
+}
+
+/* For mobile screens (small screens below 768px) */
+@media screen and (max-width: 768px) {
+    /* Navbar links are hidden on small screens by default */
+    .navbar-menu {
+        display: none;  /* Initially hidden */
+        flex-direction: column;  /* Stack links vertically */
+        width: 100%;
+        background-color: white;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* When the menu is active, show it */
+    .navbar-menu.active {
+        display: flex;  /* Show the links */
+    }
+
+    /* Navbar items will take the full width of the screen */
+    .navbar a {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    /* Hamburger icon is shown on small screens */
+    .navbar-toggle {
+        display: block;  /* Display the hamburger icon on small screens */
+    }
+}
+
+
 /* Intro Section */
 .intro {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap; /* Allow wrapping for small screens */
     margin-top: 40px;
 }
 
@@ -71,13 +123,15 @@ body {
     align-items: center;
 }
 
+
 .image-container img {
-    width: 250px;
-    height: 300px;
+    width: 100%;
+    max-width: 250px; /* Keep the maximum size */
+    height: auto;
     object-fit: cover;
-    border: 5px solid #f4f4f4; /* Border color around the image */
     border-radius: 10px;
 }
+
 
 /* Content Section */
 .content {
@@ -130,12 +184,14 @@ body {
 }
 
 /* Individual Experience Item */
+
 .experience-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 20px 0;
     padding: 20px;
+    flex-wrap: wrap; 
 }
 
 /* Image Container */
@@ -245,5 +301,272 @@ body {
     margin: 0;
   }
  
+/* Education Section */
+/* Education Section */
+.education-section {
+    padding: 50px 20px;
+    background: linear-gradient(to right, #123456, #abcdef);
+    position: relative;
+}
 
-  
+.education-section h2 {
+    font-size: 2.5rem;
+    color: #123456;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 0;
+    border-left: 2px solid #e0e3e6;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.timeline-icon {
+    width: 20px;
+    height: 20px;
+    background-color: #d4d8dc;
+    border-radius: 50%;
+    position: absolute;
+    left: -11px;
+    top: 5;
+}
+
+.timeline-content {
+    background-color: white;
+    padding: 15px 25px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-left: 30px;
+    width: 100%;
+}
+
+.timeline-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    color: #123456;
+}
+
+.timeline-content span {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.timeline-content p {
+    font-size: 1rem;
+    color: #333;
+}
+
+
+/* Projects Section */
+.projects-section {
+    padding: 50px 20px;
+    background: linear-gradient(to right, #123456, #abcdef);
+}
+
+.projects-section h2 {
+    font-size: 2.5rem;
+    color: #123456;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .project {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+}
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-content {
+    margin-left: 20px;
+}
+
+.project-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #123456;
+}
+
+.project-content span {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.project-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.project-content ul li {
+    margin-bottom: 5px;
+}
+
+
+/* Activities Section */
+.activities-section {
+    padding: 50px 20px;
+    background: linear-gradient(to right, #123456, #abcdef);
+    text-align: center;
+}
+
+.activities-section h2 {
+    font-size: 2.5rem;
+    color: #123456;
+    margin-bottom: 30px;
+}
+
+.activities-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.activity-box {
+    background: #e3f2fd; /* Light blue color for the first box */
+    border-radius: 15px;
+    padding: 20px;
+    width: 30%;
+    margin: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .activity-box {
+        width: 100%; /* Make activity boxes take full width on smaller screens */
+    }
+}
+
+.activity-box:nth-child(2) {
+    background: #fce4ec; /* Light pink color for the second box */
+}
+
+.activity-box:nth-child(3) {
+    background: #e8f5e9; /* Light green color for the third box */
+}
+
+.activity-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.activity-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.activity-box span {
+    font-size: 1.2rem;
+    color: #777;
+    display: block;
+}
+
+
+.contact-section {
+    width: 80%;
+    max-width: 600px;
+    margin: 50px auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-header {
+    background: linear-gradient(to right, #123456, #abcdef);
+    padding: 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.contact-header h2 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.contact-content {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+.contact-info {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info li {
+    margin: 20px 0;
+}
+
+.contact-info a {
+    color: #007BFF;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+@media (max-width: 768px) {
+    .contact-section {
+        width: 100%;
+        max-width: none;
+    }
+
+    .contact-header h2 {
+        font-size: 1.5rem;
+    }
+}
+
+
+@media (max-width: 480px) {
+    body {
+        font-size: 1rem;
+    }
+    .welcome {
+        font-size: 2rem;
+    }
+    .intro {
+        flex-direction: column;
+    }
+    .experience-item {
+        flex-direction: column;
+    }
+    .skills-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
