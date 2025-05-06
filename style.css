@@ -570,3 +570,65 @@ body {
         align-items: flex-start;
     }
 }
+
+@media (max-width: 768px) {
+  .experience-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .experience-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+
+  .experience-content {
+    margin-left: 0;
+  }
+
+  .skills-content {
+    width: 100%;
+  }
+
+  .content {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .image-container img {
+    max-width: 70%;
+  }
+
+  .project-content {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .content h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .experience-item .experience-content h3 {
+    font-size: 1.4rem;
+  }
+
+  .skills-title {
+    font-size: 1.5rem;
+  }
+
+  .navbar-menu {
+    top: 50px;
+  }
+}
+
+/* Optional Enhancements */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
