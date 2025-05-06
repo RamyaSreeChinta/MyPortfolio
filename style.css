@@ -372,7 +372,7 @@ body {
 /* Projects Section */
 .projects-section {
     padding: 50px 20px;
-    background: linear-gradient(to right, #123456, #abcdef);
+    background: linear-gradient(to right, #123456, #abcdef); /* Keep overall page color */
 }
 
 .projects-section h2 {
@@ -395,9 +395,15 @@ body {
 
 @media (max-width: 768px) {
     .project {
-        margin-bottom: 15px;
-        width: 100%;
-    }
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 }
 .project:hover {
     transform: translateY(-5px);
@@ -631,4 +637,222 @@ html {
 
 body {
   overflow-x: hidden;
+}
+
+
+/* Enhanced mobile styles for experience section */
+@media (max-width: 768px) {
+  .experience-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .experience-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .experience-content {
+    margin-left: 0;
+  }
+
+  .experience-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .experience-content ul li {
+    font-size: 0.95rem;
+  }
+}
+
+
+/* New experience card styling */
+.experience-card {
+  background: rgba(200, 220, 255, 0.15);
+  border-radius: 20px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.experience-header h3 {
+  font-size: 1.4rem;
+  margin: 0;
+  color: #1a2b4c;
+}
+
+.experience-date {
+  color: #6c757d;
+  font-size: 0.95rem;
+}
+
+.experience-company {
+  margin: 8px 0 15px 0;
+  font-size: 0.95rem;
+  color: #6c757d;
+}
+
+.experience-card ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.experience-card ul li {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.experience-image {
+  width: 180px;
+  height: auto;
+  margin: 15px 0;
+  border-radius: 10px;
+  display: block;
+}
+
+/* Responsive adjustments for experience cards */
+@media (max-width: 768px) {
+  .experience-card {
+    text-align: center;
+  }
+
+  .experience-header {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .experience-image {
+    margin: 0 auto 15px auto;
+    width: 70%;
+  }
+
+  .experience-card ul {
+    text-align: left;
+    padding-left: 20px;
+  }
+}
+
+
+.experience-card,
+.experience-header h3,
+.experience-date,
+.experience-company em,
+.experience-card ul li {
+  color: white !important;
+}
+
+
+.experience-image-right {
+  float: right;
+  margin: 10px 0 10px 20px;
+  width: 180px;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .experience-image-right {
+    float: none;
+    display: block;
+    margin: 0 auto 15px auto;
+    width: 70%;
+  }
+}
+
+
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  
+}
+
+@media (min-width: 769px) {
+    .experience-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: nowrap;
+      gap: 20px;
+    }
+  
+    .experience-img {
+      flex: 0 0 40%;
+      display: flex;
+      flex-direction: column; /* Forces vertical stacking */
+      justify-content: flex-start;
+      align-items: center;
+      gap: 15px;
+    }
+  
+    .experience-img img {
+      width: 100%;
+      max-width: 280px;
+      height: auto;
+      border-radius: 10px;
+      object-fit: contain;
+    }
+  
+    .experience-text {
+      flex: 0 0 60%;
+    }
+  }
+  
+
+@media (max-width: 768px) {
+  .experience-flex {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .experience-text,
+  .experience-img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .experience-img {
+    display: flex;
+  flex-direction: column; /* ← This is the missing piece */
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  }
+
+  .experience-img img {
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 769px) {
+  .experience-img {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+  }
+
+  .experience-img img {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: contain;
+  }
+}
+
+.research-image {
+  max-width: 400px;
 }
