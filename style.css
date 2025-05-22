@@ -975,3 +975,18 @@ body {
   position: absolute;
   left: 0.4em;
 }
+/* Apply text justification only on laptop/desktop screens */
+@media (min-width: 769px) {
+  .experience-text p, 
+  .experience-text ul li {
+    text-align: justify;
+  }
+}
+
+/* Ensure mobile screens keep the default left alignment */
+@media (max-width: 768px) {
+  .experience-text p, 
+  .experience-text ul li {
+    text-align: left;
+  }
+}
