@@ -891,8 +891,8 @@ body {
   /* Target specific experience blocks for larger images on mobile */
   /* Graduate Research Assistant */
   .experience-card:nth-child(2) .experience-img img {
-    max-width: 280px !important;
-    max-height: 220px !important;
+    max-width: 310px !important;
+    max-height: 310px !important;
   }
   
   /* Mechanical Design Engineer at Nala Robotics */
